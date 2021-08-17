@@ -1,0 +1,42 @@
+﻿@using HomeWork17._08._21.Models
+@using HomeWork17._08._21.ViewModels
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Shared/_Layout.cshtml";
+}
+
+@*<h1>Name: @ViewBag.Name</h1>
+<h1>Surname: @ViewBag.Surname</h1>
+<h1>Age: @TempData["Age"]</h1>*@
+
+
+
+<body style="background-color: purple; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; display: flex; justify-content:center; line-height:3.29">
+    <ul>
+
+        @foreach (Students student in Model.Students)
+        {
+            <li style="list-style:none; font-size:20px; flex-wrap:wrap; "><b style="color:cornflowerblue">Id:</b> @student.Id <b style="color:lavenderblush">Name:</b> @student.Name  <b>Surname:</b> @student.Surname <b style="color:teal">Phone:</b> @student.Phone</li>
+
+        }
+
+
+
+
+    </ul>
+    <ul style="display:flex; justify-content:center;">
+        @foreach (int number in Model.Numbers)
+        {
+            <li style="list-style:none; color:darkorange; font-size:40px;" > , @number</li>
+
+        }
+
+
+
+
+    </ul>
+</body>
+
+
+
